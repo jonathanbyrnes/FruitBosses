@@ -1,0 +1,4 @@
+name: FruitBosses
+version: '1.0-SNAPSHOT'
+main: byrnes.jonathan.FruitBosses
+api-version: '1.21'
