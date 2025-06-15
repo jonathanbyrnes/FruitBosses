@@ -25,14 +25,13 @@ rotation_order:
 # =============================
 
 bosses:
-
   jupiter:
-    mythic_id: JupiterBoss
+    mythic_id: WITHER_SKELETON
     spawn:
       world: world
-      x: 100.5
-      y: 65.0
-      z: -120.5
+      x: 93.0
+      y: 70.0
+      z: -287.0
     rewards:
       position_1:
         - "give %player% netherite_ingot 2"
@@ -42,17 +41,23 @@ bosses:
       position_3:
         - "give %player% emerald 10"
       top_5:
-        - "say %player% placed in the top 5 against Jupiter."
+        - "broadcast &#F78122&l⚔ %boss% BOSS LEADERBOARD ⚔"
+        - "broadcast &#FFD700&l① &#FFFFFF%player_position_1% &#AAAAAA» &#FF5555%damage_position_1%dmg"
+        - "broadcast &#C0C0C0&l② &#FFFFFF%player_position_2% &#AAAAAA» &#FF7777%damage_position_2%dmg"
+        - "broadcast &#CD7F32&l③ &#FFFFFF%player_position_3% &#AAAAAA» &#FF9999%damage_position_3%dmg"
+        - "broadcast &#808080&l④ &#FFFFFF%player_position_4% &#AAAAAA» &#FFBBBB%damage_position_4%dmg"
+        - "broadcast &#808080&l⑤ &#FFFFFF%player_position_5% &#AAAAAA» &#FFDDDD%damage_position_5%dmg"
+        - "broadcast &#F78122&m-------------------------------------------- &r"
       participant:
         - "say %player% participated in the Jupiter battle."
 
   neptune:
-    mythic_id: NeptuneBoss
+    mythic_id: WITHER_SKELETON
     spawn:
       world: world
-      x: 120.0
-      y: 65.0
-      z: -90.0
+      x: 93.0
+      y: 70.0
+      z: -287.0
     rewards:
       position_1:
         - "give %player% prismarine_crystals 10"
@@ -61,17 +66,23 @@ bosses:
       position_3:
         - "give %player% kelp 32"
       top_5:
-        - "say %player% placed in the top 5 against Neptune."
+        - "broadcast &#F78122&l⚔ %boss% BOSS LEADERBOARD ⚔"
+        - "broadcast &#FFD700&l① &#FFFFFF%player_position_1% &#AAAAAA» &#FF5555%damage_position_1%dmg"
+        - "broadcast &#C0C0C0&l② &#FFFFFF%player_position_2% &#AAAAAA» &#FF7777%damage_position_2%dmg"
+        - "broadcast &#CD7F32&l③ &#FFFFFF%player_position_3% &#AAAAAA» &#FF9999%damage_position_3%dmg"
+        - "broadcast &#808080&l④ &#FFFFFF%player_position_4% &#AAAAAA» &#FFBBBB%damage_position_4%dmg"
+        - "broadcast &#808080&l⑤ &#FFFFFF%player_position_5% &#AAAAAA» &#FFDDDD%damage_position_5%dmg"
+        - "broadcast &#F78122&m-------------------------------------------- &r"
       participant:
         - "say %player% fought bravely against Neptune."
 
   vulcan:
-    mythic_id: VulcanBoss
+    mythic_id: WITHER_SKELETON
     spawn:
       world: world
-      x: 140.0
-      y: 65.0
-      z: -60.0
+      x: 93.0
+      y: 70.0
+      z: -287.0
     rewards:
       position_1:
         - "give %player% blaze_rod 8"
@@ -80,17 +91,24 @@ bosses:
       position_3:
         - "give %player% fire_charge 10"
       top_5:
-        - "say %player% withstood Vulcan’s flames."
+        - "broadcast &#F78122&l⚔ %boss% BOSS LEADERBOARD ⚔"
+        - "broadcast &#FFD700&l① &#FFFFFF%player_position_1% &#AAAAAA» &#FF5555%damage_position_1%dmg"
+        - "broadcast &#C0C0C0&l② &#FFFFFF%player_position_2% &#AAAAAA» &#FF7777%damage_position_2%dmg"
+        - "broadcast &#CD7F32&l③ &#FFFFFF%player_position_3% &#AAAAAA» &#FF9999%damage_position_3%dmg"
+        - "broadcast &#808080&l④ &#FFFFFF%player_position_4% &#AAAAAA» &#FFBBBB%damage_position_4%dmg"
+        - "broadcast &#808080&l⑤ &#FFFFFF%player_position_5% &#AAAAAA» &#FFDDDD%damage_position_5%dmg"
+        - - "broadcast &#F78122&m-------------------------------------------- &r"
+
       participant:
         - "say %player% joined the battle against Vulcan."
 
   pluto:
-    mythic_id: PlutoBoss
+    mythic_id: WITHER_SKELETON
     spawn:
       world: world
-      x: 160.0
-      y: 65.0
-      z: -30.0
+      x: 93.0
+      y: 70.0
+      z: -287.0
     rewards:
       position_1:
         - "give %player% soul_sand 16"
@@ -99,17 +117,23 @@ bosses:
       position_3:
         - "give %player% nether_wart 10"
       top_5:
-        - "say %player% defied Pluto’s shadow."
+        - "broadcast &#F78122&l⚔ %boss% BOSS LEADERBOARD ⚔"
+        - "broadcast &#FFD700&l① &#FFFFFF%player_position_1% &#AAAAAA» &#FF5555%damage_position_1%dmg"
+        - "broadcast &#C0C0C0&l② &#FFFFFF%player_position_2% &#AAAAAA» &#FF7777%damage_position_2%dmg"
+        - "broadcast &#CD7F32&l③ &#FFFFFF%player_position_3% &#AAAAAA» &#FF9999%damage_position_3%dmg"
+        - "broadcast &#808080&l④ &#FFFFFF%player_position_4% &#AAAAAA» &#FFBBBB%damage_position_4%dmg"
+        - "broadcast &#808080&l⑤ &#FFFFFF%player_position_5% &#AAAAAA» &#FFDDDD%damage_position_5%dmg"
+        - "broadcast &#F78122&m-------------------------------------------- &r"
       participant:
         - "say %player% stepped into Pluto’s domain."
 
   minerva:
-    mythic_id: MinervaBoss
+    mythic_id: WITHER_SKELETON
     spawn:
       world: world
-      x: 180.0
-      y: 65.0
-      z: 0.0
+      x: 93.0
+      y: 70.0
+      z: -287.0
     rewards:
       position_1:
         - "give %player% book 5"
@@ -119,17 +143,23 @@ bosses:
       position_3:
         - "give %player% book 1"
       top_5:
-        - "say %player% was among Minerva’s brightest."
+        - "broadcast &#F78122&l⚔ %boss% BOSS LEADERBOARD ⚔"
+        - "broadcast &#FFD700&l① &#FFFFFF%player_position_1% &#AAAAAA» &#FF5555%damage_position_1%dmg"
+        - "broadcast &#C0C0C0&l② &#FFFFFF%player_position_2% &#AAAAAA» &#FF7777%damage_position_2%dmg"
+        - "broadcast &#CD7F32&l③ &#FFFFFF%player_position_3% &#AAAAAA» &#FF9999%damage_position_3%dmg"
+        - "broadcast &#808080&l④ &#FFFFFF%player_position_4% &#AAAAAA» &#FFBBBB%damage_position_4%dmg"
+        - "broadcast &#808080&l⑤ &#FFFFFF%player_position_5% &#AAAAAA» &#FFDDDD%damage_position_5%dmg"
+        - "broadcast &#F78122&m-------------------------------------------- &r"
       participant:
         - "say %player% gained wisdom in battle."
 
   mars:
-    mythic_id: MarsBoss
+    mythic_id: WITHER_SKELETON
     spawn:
       world: world
-      x: 200.0
-      y: 65.0
-      z: 30.0
+      x: 93.0
+      y: 70.0
+      z: -287.0
     rewards:
       position_1:
         - "give %player% iron_sword{Unbreakable:1b} 1"
@@ -138,7 +168,13 @@ bosses:
       position_3:
         - "give %player% shield 1"
       top_5:
-        - "say %player% held their ground against Mars."
+        - "broadcast &#F78122&l⚔ %boss% BOSS LEADERBOARD ⚔"
+        - "broadcast &#FFD700&l① &#FFFFFF%player_position_1% &#AAAAAA» &#FF5555%damage_position_1%dmg"
+        - "broadcast &#C0C0C0&l② &#FFFFFF%player_position_2% &#AAAAAA» &#FF7777%damage_position_2%dmg"
+        - "broadcast &#CD7F32&l③ &#FFFFFF%player_position_3% &#AAAAAA» &#FF9999%damage_position_3%dmg"
+        - "broadcast &#808080&l④ &#FFFFFF%player_position_4% &#AAAAAA» &#FFBBBB%damage_position_4%dmg"
+        - "broadcast &#808080&l⑤ &#FFFFFF%player_position_5% &#AAAAAA» &#FFDDDD%damage_position_5%dmg"
+        - "broadcast &#F78122&m-------------------------------------------- &r"
       participant:
         - "say %player% joined the ranks of warriors."
 
@@ -155,3 +191,4 @@ messages:
   next_boss: "<yellow>Next boss: <gold><bold>%boss%</bold>"
   next_boss_timer: "<yellow>Time until spawn: <green><bold>%time%</bold>"
   command_disabled: "<gray>This command is currently disabled."
+  rewards_announced: "<green>Rewards have been distributed for the <gold>%boss%</gold> fight!"

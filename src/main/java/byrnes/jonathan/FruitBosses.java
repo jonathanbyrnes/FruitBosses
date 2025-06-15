@@ -26,7 +26,7 @@ public final class FruitBosses extends JavaPlugin {
         configHelper = new ConfigHelper(this);
         BossLoader bossLoader = new BossLoader(configHelper);
         DamageListener damageListener = new DamageListener();
-        bossManager = new BossManager(configHelper, bossLoader);
+        bossManager = new BossManager(configHelper, bossLoader, damageListener);
         RewardManager rewardManager = new RewardManager(damageListener, bossLoader, configHelper);
 
         // Register events

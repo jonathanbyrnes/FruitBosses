@@ -1,10 +1,11 @@
 package byrnes.jonathan.events;
 
 import byrnes.jonathan.manager.RewardManager;
-import org.bukkit.entity.LivingEntity;
+import byrnes.jonathan.events.DamageListener;
+import io.lumine.mythic.bukkit.events.MythicMobDeathEvent;
+import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.entity.EntityDeathEvent;
 
 public class BossDeathListener implements Listener {
 
@@ -17,12 +18,19 @@ public class BossDeathListener implements Listener {
     }
 
     @EventHandler
-    public void onBossDeath(EntityDeathEvent event) {
-        LivingEntity entity = event.getEntity();
+    public void onBossDeath(MythicMobDeathEvent event) {
+        if (damageListener.getActiveBoss() == null) return;
 
-        // Only proceed if this is the tracked boss
-        if (!damageListener.isActiveBoss(entity)) return;
+        String deadMobId = event.getMob().getType().getInternalName();
+        String expectedMobId = damageListener.getActiveBoss().getMythicId();
 
+        if (!deadMobId.equalsIgnoreCase(expectedMobId)) {
+            Bukkit.getLogger().info("[FruitBosses] MythicMob ID mismatch: died=" + deadMobId + ", expected=" + expectedMobId);
+            return;
+        }
+
+        Bukkit.getLogger().info("[FruitBosses] Boss match confirmed: " + deadMobId + ". Distributing rewards.");
         rewardManager.distributeRewards();
+        damageListener.clearActiveBoss();
     }
 }
