@@ -1,0 +1,157 @@
+# =============================
+# FruitBosses - Configuration
+# =============================
+
+settings:
+  announce_boss_spawn: true            # Whether to broadcast boss spawns
+  show_next_boss_command: true         # Whether /boss next is enabled
+
+  # DO NOT EDIT — These are managed automatically to preserve rotation after server restart
+  current_rotation_index: 0
+  next_spawn_time: 0
+
+# The rotation order of bosses (by ID)
+rotation_interval_hours: 72
+rotation_order:
+  - jupiter
+  - neptune
+  - vulcan
+  - pluto
+  - minerva
+  - mars
+
+# =============================
+# Boss Definitions
+# =============================
+
+bosses:
+
+  jupiter:
+    mythic_id: JupiterBoss
+    spawn:
+      world: world
+      x: 100.5
+      y: 65.0
+      z: -120.5
+    rewards:
+      position_1:
+        - "give %player% netherite_ingot 2"
+        - "broadcast %player% dealt the most damage to Jupiter!"
+      position_2:
+        - "give %player% diamond 5"
+      position_3:
+        - "give %player% emerald 10"
+      top_5:
+        - "say %player% placed in the top 5 against Jupiter."
+      participant:
+        - "say %player% participated in the Jupiter battle."
+
+  neptune:
+    mythic_id: NeptuneBoss
+    spawn:
+      world: world
+      x: 120.0
+      y: 65.0
+      z: -90.0
+    rewards:
+      position_1:
+        - "give %player% prismarine_crystals 10"
+      position_2:
+        - "give %player% prismarine_shard 6"
+      position_3:
+        - "give %player% kelp 32"
+      top_5:
+        - "say %player% placed in the top 5 against Neptune."
+      participant:
+        - "say %player% fought bravely against Neptune."
+
+  vulcan:
+    mythic_id: VulcanBoss
+    spawn:
+      world: world
+      x: 140.0
+      y: 65.0
+      z: -60.0
+    rewards:
+      position_1:
+        - "give %player% blaze_rod 8"
+      position_2:
+        - "give %player% magma_cream 5"
+      position_3:
+        - "give %player% fire_charge 10"
+      top_5:
+        - "say %player% withstood Vulcan’s flames."
+      participant:
+        - "say %player% joined the battle against Vulcan."
+
+  pluto:
+    mythic_id: PlutoBoss
+    spawn:
+      world: world
+      x: 160.0
+      y: 65.0
+      z: -30.0
+    rewards:
+      position_1:
+        - "give %player% soul_sand 16"
+      position_2:
+        - "give %player% ghast_tear 2"
+      position_3:
+        - "give %player% nether_wart 10"
+      top_5:
+        - "say %player% defied Pluto’s shadow."
+      participant:
+        - "say %player% stepped into Pluto’s domain."
+
+  minerva:
+    mythic_id: MinervaBoss
+    spawn:
+      world: world
+      x: 180.0
+      y: 65.0
+      z: 0.0
+    rewards:
+      position_1:
+        - "give %player% book 5"
+        - "give %player% enchanted_book{StoredEnchantments:[{id:sharpness,lvl:5}]} 1"
+      position_2:
+        - "give %player% book 3"
+      position_3:
+        - "give %player% book 1"
+      top_5:
+        - "say %player% was among Minerva’s brightest."
+      participant:
+        - "say %player% gained wisdom in battle."
+
+  mars:
+    mythic_id: MarsBoss
+    spawn:
+      world: world
+      x: 200.0
+      y: 65.0
+      z: 30.0
+    rewards:
+      position_1:
+        - "give %player% iron_sword{Unbreakable:1b} 1"
+      position_2:
+        - "give %player% iron_ingot 16"
+      position_3:
+        - "give %player% shield 1"
+      top_5:
+        - "say %player% held their ground against Mars."
+      participant:
+        - "say %player% joined the ranks of warriors."
+
+# =============================
+# Plugin Messages
+# =============================
+
+messages:
+  reload_success: "<green>FruitBosses config reloaded successfully."
+  boss_spawned: "<dark_purple>A wild <light_purple><bold>%boss%</bold> <dark_purple>has appeared!"
+  boss_spawn_failed: "<red>Failed to spawn boss: <bold>%boss%</bold>."
+  boss_not_found: "<red>No MythicMob found for boss <bold>%boss%</bold>."
+  spawn_world_missing: "<red>World <bold>%world%</bold> not found or not loaded!"
+  next_boss: "<yellow>Next boss: <gold><bold>%boss%</bold>"
+  next_boss_timer: "<yellow>Time until spawn: <green><bold>%time%</bold>"
+  command_disabled: "<gray>This command is currently disabled."

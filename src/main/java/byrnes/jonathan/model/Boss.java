@@ -20,18 +20,18 @@ public class Boss {
     }
 
     public String getId() {
-        return id;
+        return this.id;
     }
 
     public String getMythicId() {
-        return mythicId;
+        return this.mythicId;
     }
 
     public Location getLocation() {
-        return location;
+        return this.location;
     }
 
     public Map<String, List<String>> getRewards() {
-        return rewards;
+        return this.rewards;
     }
 }

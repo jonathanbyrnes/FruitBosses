@@ -8,6 +8,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.util.List;
 
 public class ConfigHelper {
+
     private final JavaPlugin plugin;
 
     public ConfigHelper(JavaPlugin plugin) {
@@ -18,8 +19,16 @@ public class ConfigHelper {
         return plugin.getConfig();
     }
 
+    public JavaPlugin getPlugin() {
+        return this.plugin;
+    }
+
     public void reload() {
         plugin.reloadConfig();
+    }
+
+    public void save() {
+        plugin.saveConfig();
     }
 
     public Component getMessage(String path) {
@@ -37,6 +46,26 @@ public class ConfigHelper {
 
     public List<String> getList(String path) {
         return config().getStringList(path);
+    }
+
+    public int getRotationIntervalHours() {
+        return config().getInt("settings.rotation_interval_hours", 72);
+    }
+
+    public String getCurrentRotationIndex() {
+        return config().getString("settings.current_rotation_index", "jupiter");
+    }
+
+    public void setCurrentRotationIndex(String index) {
+        config().set("settings.current_rotation_index", index);
+    }
+
+    public long getNextSpawnTimestamp() {
+        return config().getLong("settings.next_spawn_time", 0L);
+    }
+
+    public void setNextSpawnTimestamp(long timestamp) {
+        config().set("settings.next_spawn_time", timestamp);
     }
 
 }
